@@ -17,6 +17,7 @@ function Login() {
     if (isAuthenticated) {
       navigate('/dashboard');
     }
+    console.log(isAuthenticated);
   }, [isAuthenticated, navigate]);
 
   useEffect(() => {
@@ -30,6 +31,7 @@ function Login() {
       ...formData,
       [e.target.name]: e.target.value,
     });
+    
   };
 
   const handleSubmit = async (e) => {
