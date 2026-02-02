@@ -17,40 +17,25 @@ function Dashboard() {
 
   return (
     <ProtectedRoutes>
-      <div style={{ padding: '2rem' }}>
-        <h1>Dashboard</h1>
+      <div className="p-8">
+        <h1 className="text-3xl font-bold mb-6">Dashboard</h1>
         {user && (
-          <div>
-            <p>Welcome, {user.name}!</p>
-            <p>Email: {user.email}</p>
-            <p>Role: {user.role}</p>
+          <div className="bg-white p-6 rounded-lg shadow-md mb-6">
+            <p className="text-xl mb-2">Welcome, {user.name}!</p>
+            <p className="text-gray-600 mb-1">Email: {user.email}</p>
+            <p className="text-gray-600">Role: {user.role}</p>
           </div>
         )}
-        <div style={{ marginTop: '2rem' }}>
+        <div className="mt-8">
           <button
             onClick={() => navigate('/profile')}
-            style={{
-              padding: '0.5rem 1rem',
-              marginRight: '1rem',
-              backgroundColor: '#007bff',
-              color: 'white',
-              border: 'none',
-              borderRadius: '4px',
-              cursor: 'pointer'
-            }}
+            className="px-4 py-2 mr-4 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
           >
             Profile
           </button>
           <button
             onClick={() => navigate('/logout')}
-            style={{
-              padding: '0.5rem 1rem',
-              backgroundColor: '#dc3545',
-              color: 'white',
-              border: 'none',
-              borderRadius: '4px',
-              cursor: 'pointer'
-            }}
+            className="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors"
           >
             Logout
           </button>

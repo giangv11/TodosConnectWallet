@@ -13,13 +13,8 @@ function Logout() {
   }, [dispatch, navigate]);
 
   return (
-    <div style={{ 
-      display: 'flex', 
-      justifyContent: 'center', 
-      alignItems: 'center', 
-      minHeight: '100vh' 
-    }}>
-      <div>Logging out...</div>
+    <div className="flex justify-center items-center min-h-screen">
+      <div className="text-gray-600">Logging out...</div>
     </div>
   );
 }

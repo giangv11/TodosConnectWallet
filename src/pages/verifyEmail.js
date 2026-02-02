@@ -34,38 +34,22 @@ function VerifyEmail() {
   }, [token, navigate]);
 
   return (
-    <div style={{ 
-      display: 'flex', 
-      justifyContent: 'center', 
-      alignItems: 'center', 
-      minHeight: '100vh',
-      backgroundColor: '#f5f5f5'
-    }}>
-      <div style={{
-        backgroundColor: 'white',
-        padding: '2rem',
-        borderRadius: '8px',
-        boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
-        width: '100%',
-        maxWidth: '400px',
-        textAlign: 'center'
-      }}>
-        <h2 style={{ marginBottom: '1.5rem' }}>Email Verification</h2>
+    <div className="flex justify-center items-center min-h-screen bg-gray-100">
+      <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md text-center">
+        <h2 className="mb-6 text-2xl font-semibold">Email Verification</h2>
         
         {isLoading ? (
-          <div>Verifying email...</div>
+          <div className="text-gray-600">Verifying email...</div>
         ) : (
           <>
-            <div style={{
-              backgroundColor: message.includes('success') ? '#efe' : '#fee',
-              color: message.includes('success') ? '#3c3' : '#c33',
-              padding: '0.75rem',
-              borderRadius: '4px',
-              marginBottom: '1rem'
-            }}>
+            <div className={`p-3 rounded mb-4 ${
+              message.includes('success')
+                ? 'bg-green-100 text-green-700'
+                : 'bg-red-100 text-red-700'
+            }`}>
               {message}
             </div>
-            <Link to="/" style={{ color: '#007bff', textDecoration: 'none' }}>
+            <Link to="/" className="text-blue-600 hover:text-blue-800 no-underline">
               Go to Login
             </Link>
           </>
