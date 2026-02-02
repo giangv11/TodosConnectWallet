@@ -10,6 +10,9 @@ This guide will help you set up both the frontend and backend for the myself e-c
 
 ## Backend Setup
 
+
+
+
 1. Navigate to the backend directory:
 ```bash
 cd backend
