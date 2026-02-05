@@ -29,7 +29,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Database connection
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/myself';
+const MONGODB_URI = process.env.MONGODB_URI;
 
 mongoose.connect(MONGODB_URI)
 .then(() => {
