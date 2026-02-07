@@ -48,7 +48,23 @@ const userSchema = new mongoose.Schema({
     state: String,
     zipCode: String,
     country: String
-  }
+  },
+  userType: {
+    type: String,
+    enum: ['user', 'freelancer', 'client', 'business'],
+    default: 'user'
+  },
+  walletAddress: {
+    type: String,
+    default: ''
+  },
+  bio: {
+    type: String,
+    default: ''
+  },
+  skills: [{
+    type: String
+  }]
 }, {
   timestamps: true
 });

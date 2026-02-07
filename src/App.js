@@ -8,6 +8,7 @@ import Logout from './pages/logout'
 import ForgotPassword from './pages/forgotPassword'
 import ResetPassword from './pages/resetPassword'
 import VerifyEmail from './pages/verifyEmail'
+import Wallet from './pages/wallet'
 
 
 export default function App() {
@@ -23,6 +24,7 @@ export default function App() {
       <Route path="/forgotPassword" element={<ForgotPassword />}/>
       <Route path="/resetPassword" element={<ResetPassword />}/>
       <Route path="/verifyEmail" element={<VerifyEmail />}/>
+      <Route path="/wallet" element={<Wallet />}/>
     </Routes>
     
     

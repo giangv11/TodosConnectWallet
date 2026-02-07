@@ -81,7 +81,9 @@ router.post('/register', [
           name: user.name,
           email: user.email,
           role: user.role,
-          isEmailVerified: user.isEmailVerified
+          isEmailVerified: user.isEmailVerified,
+          userType: user.userType,
+          walletAddress: user.walletAddress
         },
         token
       }
@@ -140,7 +142,11 @@ router.post('/login', [
           email: user.email,
           role: user.role,
           isEmailVerified: user.isEmailVerified,
-          avatar: user.avatar
+          avatar: user.avatar,
+          userType: user.userType,
+          bio: user.bio,
+          skills: user.skills,
+          walletAddress: user.walletAddress
         },
         token
       }
@@ -177,7 +183,11 @@ router.get('/me', protect, async (req, res, next) => {
           isEmailVerified: user.isEmailVerified,
           avatar: user.avatar,
           phone: user.phone,
-          address: user.address
+          address: user.address,
+          userType: user.userType,
+          bio: user.bio,
+          skills: user.skills,
+          walletAddress: user.walletAddress
         }
       }
     });
@@ -342,7 +352,9 @@ router.post('/reset-password', [
           id: user._id,
           name: user.name,
           email: user.email,
-          role: user.role
+          role: user.role,
+          userType: user.userType,
+          walletAddress: user.walletAddress
         },
         token: newToken
       }

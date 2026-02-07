@@ -63,13 +63,17 @@ router.put('/:id', protect, async (req, res, next) => {
       });
     }
 
-    const { name, phone, address, avatar } = req.body;
+    const { name, phone, address, avatar, userType, bio, skills, walletAddress } = req.body;
     const updateData = {};
 
     if (name) updateData.name = name;
-    if (phone) updateData.phone = phone;
+    if (phone !== undefined) updateData.phone = phone;
     if (address) updateData.address = address;
     if (avatar) updateData.avatar = avatar;
+    if (userType) updateData.userType = userType;
+    if (bio !== undefined) updateData.bio = bio;
+    if (skills) updateData.skills = skills;
+    if (walletAddress !== undefined) updateData.walletAddress = walletAddress;
 
     const user = await User.findByIdAndUpdate(
       req.params.id,
