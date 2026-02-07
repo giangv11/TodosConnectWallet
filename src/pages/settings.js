@@ -24,6 +24,12 @@ function Settings() {
             Profile
           </button>
           <button
+            onClick={() => navigate('/wallet')}
+            className="px-4 py-2 mr-4 bg-purple-600 text-white rounded-md hover:bg-purple-700 transition-colors"
+          >
+            Connect Wallet
+          </button>
+          <button
             onClick={() => navigate('/logout')}
             className="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors"
           >
