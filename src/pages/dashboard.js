@@ -34,10 +34,22 @@ function Dashboard() {
             Profile
           </button>
           <button
+            onClick={() => navigate('/settings')}
+            className="px-4 py-2 mr-4 bg-gray-600 text-white rounded-md hover:bg-gray-700 transition-colors"
+          >
+            Settings
+          </button>
+          <button
             onClick={() => navigate('/logout')}
             className="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors"
           >
             Logout
+          </button>
+             <button
+            onClick={() => navigate('/verifyEmail')}
+            className="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors"
+          >
+            Verify Email
           </button>
         </div>
       </div>
