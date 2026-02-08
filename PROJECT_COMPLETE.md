@@ -12,6 +12,8 @@
 - ✅ Email functionality (optional, won't crash if not configured)
 
 ### Frontend (React)
+
+
 - ✅ Redux store setup with all slices
 - ✅ Redux Toolkit integration
 - ✅ API integration layer
