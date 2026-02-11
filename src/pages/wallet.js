@@ -301,6 +301,9 @@ function Wallet() {
                 <p className="font-semibold">{NETWORKS[CURRENCIES.find(c => c.id === selectedCurrency)?.network]?.chainName}</p>
               </div>
               
+
+
+              
               <div className="mb-4">
                 <p className="text-sm text-gray-600 mb-1">Balance:</p>
                 <p className="text-2xl font-bold">{balance} {CURRENCIES.find(c => c.id === selectedCurrency)?.symbol}</p>
