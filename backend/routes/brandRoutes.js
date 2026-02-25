@@ -2,10 +2,6 @@ const express = require('express');
 const router = express.Router();
 const Brand = require('../models/Brand');
 const { protect, authorize } = require('../middleware/auth');
-
-// @route   GET /api/brands
-// @desc    Get all brands
-// @access  Public
 router.get('/', async (req, res, next) => {
   try {
     const brands = await Brand.find({ isActive: true }).sort('name');
@@ -19,10 +15,6 @@ router.get('/', async (req, res, next) => {
     next(error);
   }
 });
-
-// @route   GET /api/brands/:id
-// @desc    Get single brand
-// @access  Public
 router.get('/:id', async (req, res, next) => {
   try {
     const brand = await Brand.findById(req.params.id);
